@@ -113,8 +113,5 @@ function _G.sync_directory()
     end
 end
 
-return {
-    sync_directory = sync_directory
-}
 
 vim.cmd('command! FlyAwaySyncToRemote lua _G.sync_directory()')
