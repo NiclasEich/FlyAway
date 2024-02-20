@@ -29,7 +29,7 @@ local function save_cache()
     end
 end
 
-function sync_directory()
+function _G.sync_directory() 
     load_cache()
 
     -- Get the list of directories in the current working directory
