@@ -51,8 +51,7 @@ function _G.sync_directory(sync_type)
     if selection == 1 then
         directory = vim.fn.input('Enter the directory to sync: ')
     else
-        directory = directories[selection]
-        print("So you have chosen:", selection, directory)
+        directory = directories[selection - 1]
     end
     _G.last_directory = directory -- Store the selected directory as the last used option
 
@@ -78,7 +77,7 @@ function _G.sync_directory(sync_type)
     if selection == 1 then
         host = vim.fn.input('Enter the target host: ')
     else
-        host = hosts[selection]
+        host = hosts[selection -1]
     end
 
     -- Get the target host and directory from the cache
