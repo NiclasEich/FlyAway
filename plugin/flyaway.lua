@@ -84,7 +84,7 @@ function _G.sync_directory(sync_type)
     local cached_target_directory = _G.sync_cache[directory] and _G.sync_cache[directory].target_directory or ""
 
     -- Get the target host and directory from the user
-    local target_directory = vim.fn.input('Enter the target directory: ', cached_target_directory)
+    local target_directory = vim.fn.input('Enter the remot directory: ', cached_target_directory)
 
     -- Determine the rsync command based on the sync_type
     local rsync_command
@@ -95,6 +95,9 @@ function _G.sync_directory(sync_type)
     end
 
     local result = os.execute(rsync_command)
+    print("Host: ", host)
+    print("Target: ", target_directory)
+    print("dir: ", directory)
 
     if result then
         print("Sync successful")
