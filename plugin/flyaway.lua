@@ -89,9 +89,9 @@ function _G.sync_directory(sync_type)
     -- Determine the rsync command based on the sync_type
     local rsync_command
     if sync_type == 'pull' then
-        rsync_command = string.format('rsync -avz %s:%s %s', host, target_directory, directory)
+        rsync_command = string.format('rsync -avz %s:%s/ %s', host, target_directory, directory)
     else -- default to 'push'
-        rsync_command = string.format('rsync -avz %s %s:%s', directory, host, target_directory)
+        rsync_command = string.format('rsync -avz %s %s:%s/', directory, host, target_directory)
     end
 
     local result = os.execute(rsync_command)
