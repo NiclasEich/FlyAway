@@ -52,6 +52,7 @@ function _G.sync_directory(sync_type)
         directory = vim.fn.input('Enter the directory to sync: ')
     else
         directory = directories[selection]
+        print("So you have chosen:", selection, directory)
     end
     _G.last_directory = directory -- Store the selected directory as the last used option
 
