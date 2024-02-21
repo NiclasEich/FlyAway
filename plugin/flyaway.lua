@@ -97,13 +97,14 @@ function _G.sync_directory(sync_type)
     local result = vim.fn.system(rsync_command)
 
     if vim.v.shell_error then
+        vim.cmd('redraw!')
         print("Sync successful")
         _G.sync_cache[directory] = {host = host, target_directory = target_directory}
         save_cache()
     else
+        vim.cmd('redraw!')
         print("Sync failed")
     end
-    vim.cmd('redraw!')
 end
 
 -- Create a Vim command that calls the sync_directory function
