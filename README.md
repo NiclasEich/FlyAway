@@ -1,11 +1,30 @@
 # FlyAway
 Neovim Plugin for syncing files to a remote host
 
-## Syncing files
+## Commands
 
-Use `FlyAwaySync pull` to sync from a remote directory.
-Use `FlyAwaySync push` to sync to a remote directory.
+### FlyAwaySync 
 
-## Cache
+This command is used for syncing directories with a remote machine. It takes one argument, which can be 'push' or 'pull'.
 
-Every local directory and remote machine caches the last chosen remote directory locally, so you do not need to enter it everytime.
+Example usage: `:FlyAwaySync push`
+
+### FlyAwaySyncFast 
+
+This command repeats the last sync operation, either push or pull. It takes one argument, which can be 'push' or 'pull'.
+
+Example usage: `:SyncFast pull`
+
+### FlyAwayLogs 
+
+This command shows the logs of the last sync operation.
+
+Example usage: `:SyncOutput`
+
+
+## Installation with Packer
+If you are using Packer as your NeoVim plugin manager, you can add the following line to your Packer configuration:
+
+```
+use 'NiclasEich/FlyAway'
+```vim
