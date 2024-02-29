@@ -1,5 +1,6 @@
 # FlyAway
-Neovim Plugin for syncing files to a remote host
+Neovim Plugin for syncing files to a remote host. Has only a few commands, but is very fast and reliable.
+For a more complete plugin, see [transfer.nvim](https://github.com/coffebar/transfer.nvim)
 
 ## Commands
 
