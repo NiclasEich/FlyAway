@@ -27,4 +27,4 @@ If you are using Packer as your NeoVim plugin manager, you can add the following
 
 ```
 use 'NiclasEich/FlyAway'
-```vim
+```
